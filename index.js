@@ -21,7 +21,6 @@ function calculateProfitAndLoss() {
                 output.style.display = 'block'
                 output.innerHTML = `<div style = "border :2px solid #DC2626;width:97%; text-align: center; padding: 1rem .3rem;">
                 Your loss is ${loss} and loss Percentage ${lossPerc}% </div>`;
-                emotion.classList.add('sadTheme')
             }
             //profit
             else if (SP > CP) {
