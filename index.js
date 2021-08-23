@@ -5,7 +5,8 @@ const checkBtn = document.querySelector("#check-btn");
 const output = document.querySelector('#output');
 const emotion = document.querySelector('.emotion')
 
-function calculateProfitAndLoss() {
+function calculateProfitAndLoss(e) {
+    e.preventDefault()
     let CP = purchasePrice.value;
     let Qty = stockQty.value;
     let SP = currPrice.value;
@@ -32,16 +33,16 @@ function calculateProfitAndLoss() {
 
             } else {
                 output.style.display = 'block'
-                output.innerText = "No Pain No Gain :)";
+                output.innerHTML = `<div style = "border :2px solid #6D28D9; width:97%; text-align: center; padding: 1rem .3rem;">No Pain No Gain :)</div>`;
             }
         } else {
             output.style.display = 'block'
-            output.innerText = "Please enter valid value";
+            output.innerHTML = `<div style = "border :2px solid #6D28D9; width:97%; text-align: center; padding: 1rem .3rem;"> Please enter valid value </div>`;
         }
     } else {
         output.style.display = 'block'
-        output.innerText =
-            "Please enter values greater than 0 only numbers are allowed in above fields";
+        output.innerHTML =
+            `<div style = "border :2px solid #6D28D9; width:97%; text-align: center; padding: 1rem .3rem;"> Please enter values greater than 0 only numbers are allowed in above fields </div>`;
     }
 }
 
