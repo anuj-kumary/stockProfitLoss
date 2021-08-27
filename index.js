@@ -20,15 +20,14 @@ function calculateProfitAndLoss(e) {
                 const loss = (CP - SP) * Qty;
                 const lossPerc = ((CP - SP) * 100) / CP;
                 output.style.display = 'block'
-                output.innerHTML = `<div style = "border :2px solid #DC2626;width:97%; text-align: center; padding: 1rem .3rem;">
-                Your loss is ${loss} and loss Percentage ${lossPerc}% </div>`;
+                output.innerHTML = `<div style = "border :2px solid #DC2626;width:97%; text-align: center; color:#DC2626; padding: 1rem .3rem;">
+                Your loss is ${loss} and loss Percentage ${lossPerc}% 😢😢😢</div>`;
             }
             //profit
             else if (SP > CP) {
                 const profit = (SP - CP) * Qty;
                 const profitPerc = ((SP - CP) * 100) / CP;
                 output.style.display = 'block'
-                emotion.classList.add('happyTheme')
                 output.innerHTML = `<div style = "border :2px solid #6D28D9; width:97%; text-align: center; padding: 1rem .3rem;"> Yay!! Your Profit is ${profit} and profit Percentage is ${profitPerc}%</div>`;
 
             } else {
